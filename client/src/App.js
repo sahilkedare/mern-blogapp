@@ -10,13 +10,13 @@ import memories from './images/memories.png';
 
 
 const App = () => {
-    const { currentId, setCurrentId } = useState(null);
+    const [currentId, setCurrentId] = useState(null);
     const classes = useStyles();
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getPosts());
-    }, [dispatch]);
+    }, [currentId,dispatch]);
     
     return(
        <Container maxwidth="lg">
