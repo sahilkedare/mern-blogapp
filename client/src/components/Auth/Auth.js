@@ -1,5 +1,5 @@
 // 01 06 16
-
+import { useHistory } from 'react-router-dom'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import Input from './Input';
@@ -8,19 +8,33 @@ import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { GoogleLogin } from 'react-google-login';
 import Icon from './icon';
+import { signin, signup } from '../../actions/auth';
 
+const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 const Auth = () => {
     const classes = useStyles();
     const [isSignup, setIsSignUp] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const dispatch = useDispatch();
-    const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword);
-    const handleSubmit = () => {
+    const history = useHistory();
+    const [formData, setFormData] = useState(initialState);
 
+
+    const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword);
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (isSignup) {
+            dispatch(signup(formData, history));
+        } else {
+            dispatch(signin(formData, history));
+        }
+        
     };
 
-    const handleChange = () => {
-
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const switchMode = () => {
@@ -33,7 +47,9 @@ const Auth = () => {
         const token = res?.tokenId;
 
         try {
-            dispatch({type: 'AUTH', data:{result, token}})
+            dispatch({ type: 'AUTH', data: { result, token } });
+
+            history.push('/');
         } catch (error) {
             console.log(error);
         }

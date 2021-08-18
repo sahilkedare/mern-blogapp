@@ -2,6 +2,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
+// import userRoutes from './routes/users.js'
+
 import postRoutes from './routes/posts.js'
 import dotenv from 'dotenv';
 
@@ -13,7 +15,7 @@ app.use(express.urlencoded({limit: "30mb",extended: true}));
 app.use(cors());
 
 app.use('/posts', postRoutes);
-
+// app.use('/user', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 
