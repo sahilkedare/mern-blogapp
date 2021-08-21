@@ -23,7 +23,7 @@ const Input = ({ name, handleChange, label, half, autoFocus, type, handleShowPas
             </IconButton>
           </InputAdornment>
         ),
-      }:null}
+      } : null}
     />
   </Grid>
 );
