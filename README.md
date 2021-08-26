@@ -39,7 +39,6 @@ This MERN website enables the user to save their memories by adding posts and gi
 
 Before Login:
 
-<br>
 
 ![GitHub Logo](/image/home1.png)
 <br>
@@ -47,7 +46,6 @@ Before Login:
 
 After login:
 
-<br>
 
 ![GitHub Logo](/image/home2.png)
 <br>
