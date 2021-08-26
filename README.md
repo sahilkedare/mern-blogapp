@@ -33,20 +33,34 @@ This MERN website enables the user to save their memories by adding posts and gi
 
 
 
-<h1>SNAPSHOTS OF OUR WEBSITE :</h1>
+<h1>SNAPSHOTS OF WEBSITE :</h1>
 
 <h3>1. Home Page:</h3>
 
-<!-- ![GitHub Logo](/images/Project/Home-1.jpg) -->
+![GitHub Logo](/image/home1.png)
+<br>
+<br>
+
+![GitHub Logo](/image/home2.png)
+<br>
+<br>
+
+![GitHub Logo](/image/home3.png)
 <br>
 <br>
 
 <h3>2. Authentication Page :</h3>
 
-<!-- ![GitHub Logo](/images/Project/Info-1.jpg) -->
+![GitHub Logo](/image/auth.png)
 <br>
 <br>
 
 <h3>2. Post Details Page:</h3>
-<!-- ![GitHub Logo](/images/Project/Editor.jpg) -->
+
+![GitHub Logo](/image/detail1.png)
+<br>
+<br>
+
+![GitHub Logo](/image/detail2.png)
+<br>
 <br>
