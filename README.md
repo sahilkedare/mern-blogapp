@@ -38,12 +38,14 @@ This MERN website enables the user to save their memories by adding posts and gi
 <h3>1. Home Page:</h3>
 
 Before Login:
+
 <br>
 ![GitHub Logo](/image/home1.png)
 <br>
 <br>
 
 After login:
+
 <br>
 ![GitHub Logo](/image/home2.png)
 <br>
